@@ -29,6 +29,7 @@ public class Galaga extends JFrame
         BufferedImage backBuffer;
         Insets insets;
         InputHandler input;
+        LoadSpriteSheets test = new LoadSpriteSheets();
        
         int x = 0;
        
@@ -48,7 +49,7 @@ public class Galaga extends JFrame
                 while(isRunning)
                 {
                         long time = System.currentTimeMillis();
-                       
+                        //prepareScenary();
                         update();
                         draw();
                        
@@ -119,5 +120,9 @@ public class Galaga extends JFrame
                 bbg.drawOval(x+windowWidth/2, windowHeight-20, 20, 20);
                
                 g.drawImage(backBuffer, insets.left, insets.top, this);
+                
+                
+                test.paint(g,windowWidth/2, windowHeight-);
         }
+        
 }
